@@ -50,7 +50,7 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         TextField cr = new TextField();
         grid.add(cr, 1, 2);;
         
-        Label miles = new Label("Number of miles driven");
+        Label miles = new Label("Number of miles driven with private vehicle:");
         grid.add(miles, 0, 3);
         TextField m = new TextField();
         grid.add(m, 1, 3);
@@ -70,8 +70,14 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         TextField l = new TextField();
         grid.add(l, 1, 6);
         
+        Button calculate = new Button("Calculate total travel expenses");
+        
         Scene scene = new Scene(grid, 300, 375);
         stage.setScene(scene);
         stage.show();
+        
+        
     }
+    
+    
 }
