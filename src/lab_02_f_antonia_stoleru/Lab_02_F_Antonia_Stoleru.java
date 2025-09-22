@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -48,7 +49,7 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         Label carRental = new Label("Amount of car rental fees:");
         grid.add(carRental, 0, 2);
         TextField cr = new TextField();
-        grid.add(cr, 1, 2);;
+        grid.add(cr, 1, 2);
         
         Label miles = new Label("Number of miles driven with private vehicle:");
         grid.add(miles, 0, 3);
@@ -70,7 +71,12 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         TextField l = new TextField();
         grid.add(l, 1, 6);
         
+        Label result = new Label();
+        result.setVisible(false);
+        grid.add(result, 0, 9, 2, 1);
+        
         Button calculate = new Button("Calculate total travel expenses");
+        grid.add(calculate, 0, 8, 2, 1);
         
         Scene scene = new Scene(grid, 300, 375);
         stage.setScene(scene);
