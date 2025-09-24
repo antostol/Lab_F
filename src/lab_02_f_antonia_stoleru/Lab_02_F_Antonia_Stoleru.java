@@ -39,8 +39,10 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         grid.setPadding(new Insets(25, 25, 25, 25));
         
         Label title = new Label("Travel Expenses Calculator");
+        title.getStyleClass().add("title");
         grid.add(title, 0, 0, 2, 1);
         GridPane.setHalignment(title, javafx.geometry.HPos.CENTER);
+        
         
         Label days = new Label("Number of days on the trip:");
         grid.add(days, 0, 1);
@@ -85,12 +87,15 @@ public class Lab_02_F_Antonia_Stoleru extends Application {
         
         Label result = new Label();
         result.setVisible(false);
+        result.getStyleClass().add("result");
         grid.add(result, 0, 10, 2, 1);
         
         Button calculate = new Button("Calculate total travel expenses");
+        calculate.getStyleClass().add("calculate"); 
         grid.add(calculate, 0, 9, 2, 1);
         
-        Scene scene = new Scene(grid, 300, 450);
+        Scene scene = new Scene(grid, 600, 600);
+        scene.getStylesheets().add(getClass().getResource("cssstyles.css").toExternalForm());
         stage.setScene(scene);
         
         stage.setMaximized(true);
